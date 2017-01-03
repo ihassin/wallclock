@@ -1,0 +1,9 @@
+
+.gitignore
+.rspec
+Gemfile
+Gemfile.lock
+Rakefile
+features/
+lib/
+spec/
