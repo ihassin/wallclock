@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rake'
+gem 'humanize'
 
 group :test, :staging do
   gem 'simplecov'

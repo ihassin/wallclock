@@ -16,6 +16,7 @@ GEM
     diff-lcs (1.2.5)
     docile (1.1.5)
     gherkin (4.0.0)
+    humanize (1.2.3)
     json (2.0.2)
     multi_json (1.12.1)
     multi_test (0.1.2)
@@ -44,6 +45,7 @@ PLATFORMS
 
 DEPENDENCIES
   cucumber
+  humanize
   rake
   rspec
   rspec-mocks

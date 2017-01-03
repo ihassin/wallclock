@@ -52,4 +52,10 @@ describe 'Time leading to a certain hour' do
 
   end
 
+  describe 'full sentences' do
+    it 'is quarter to three' do
+      expect(WallClock.get_sentence(2, 46)).to eq %w(it is quarter to three)
+    end
+
+  end
 end
