@@ -53,16 +53,17 @@ describe 'Time leading to a certain hour' do
   end
 
   describe 'full sentences' do
-    it 'is quarter to three' do
+    it 'before the hour' do
       expect(WallClock.get_sentence(2, 46)).to eq %w(it is quarter to three)
     end
 
-    it 'is ten past five' do
+    it 'past the hour' do
       expect(WallClock.get_sentence(5, 10)).to eq %w(it is ten past five)
     end
 
-    it 'is quarter past twelve' do
-      expect(WallClock.get_sentence(12, 16)).to eq %w(it is quarter past twelve)
+    it 'half past' do
+      expect(WallClock.get_sentence(7, 30)).to eq %w(it is half past seven)
     end
+
   end
 end
