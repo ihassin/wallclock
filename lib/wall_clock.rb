@@ -3,7 +3,7 @@ require 'humanize'
 class WallClock
   FIVE_PAST = %w(five past)
   TEN_PAST = %w(ten past)
-  QUARTER_PAST = %w(ten past)
+  QUARTER_PAST = %w(quarter past)
   TWENTY_PAST = %w(twenty past)
   TWENTY_FIVE_PAST = %w('twenty five' past)
   HALF_PAST = %w(half nil)
@@ -14,15 +14,15 @@ class WallClock
   FIVE_TO = %w(five to)
 
   def self.get_sentence hour, minutes
-    preamble = %w(it is)
+    sentence = %w(it is)
     if(minutes < 30)
-      preamble.push hour.humanize
-      preamble.push get_minutes(minutes)
+      sentence.push get_minutes(minutes)
+      sentence.push hour.humanize
     else
-      preamble.push get_minutes(minutes)
-      preamble.push (hour + 1).humanize
+      sentence.push get_minutes(minutes)
+      sentence.push (hour + 1).humanize
     end
-    return preamble.flatten
+    return sentence.flatten
   end
 
   def self.get_minutes(minutes)
